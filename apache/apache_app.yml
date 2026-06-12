@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: apache-app
-  namespace: argocd
+  namespace: devops
   
 spec:
   project: devops-team
