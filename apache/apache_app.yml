@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1 # ArgoCD Application resource
 kind: Application               # Kind of resource
 metadata:                        # Metadata section                         
-  name: nginx-frontend          # App name
+  name: apache-frontend          # App name
   namespace: argocd             # Must exist in ArgoCD namespace
 spec:
-  project: frontend-team        # Assigns app to the frontend-team Project
+  project: devops-team        # Assigns app to the frontend-team Project
   source:
-    repoURL: https://github.com/<your-username>/argocd-demos.git  # Git repo
+    repoURL: https://github.com/Arps9/argocd-demos.git  # Git repo
     targetRevision: main        # Branch to watch
-    path: ui_approach/nginx     # Path in repo with manifests
+    path: apache    # Path in repo with manifests
   destination:
     server: <added_argocd_cluster_server_url>  # Target cluster, run `argocd cluster list` to see
-    namespace: frontend          # Namespace inside that cluster
+    namespace: devops         # Namespace inside that cluster
   syncPolicy:                    # Sync policy settings
     automated:                   # Enable automated sync
       prune: true                 # Delete resources removed from Git
