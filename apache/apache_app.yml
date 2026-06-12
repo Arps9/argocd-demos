@@ -3,6 +3,7 @@ kind: Application
 metadata:
   name: apache-app
   namespace: argocd
+  
 spec:
   project: devops-team
   source:
