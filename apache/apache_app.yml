@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: online-shop-app
+  name: apache-app
   namespace: argocd
 spec:
-  project: default
+  project: devops-team
   source:
     repoURL: https://github.com/Arps9/argocd-demos.git    # Replace it with your forked repo
     targetRevision: main
